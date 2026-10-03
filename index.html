@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>고가상품 세일즈 시스템 1:1마스터 | 1:1 진단상담 신청</title>
+<meta name="author" content="이지나">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="고가상품 세일즈 시스템 1:1마스터 | 1:1 진단상담">
+<meta property="og:description" content="고가 세일즈 화법 + 고가 퍼널 자동화 + 메타 광고, 3개월 1:1로 함께 만듭니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pur:#7D55C7; --pur-d:#5B3A9E; --lav:#E8E2F5; --lav2:#F4F0FB;
+  --ink:#1E1830; --sub:#5E5872; --line:#E2DCEE; --bg:#FAF8FD; --card:#fff;
+  --night:#17122A; --gold:#E9C46A; --warn:#C2410C;
+  --glow:rgba(125,85,199,.35); --night2:#2A1F4A; --foot:#120E20; --soft:#C9C2DC; --hl:#B79BEB;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+section.wrap{padding:56px 20px}
+.ribbon{background:var(--night);color:#fff;text-align:center;font-size:14px;font-weight:700;padding:10px 16px}
+.ribbon b{color:var(--gold)}
+.eyebrow{display:inline-block;background:var(--lav);color:var(--pur-d);font-size:13px;font-weight:800;border-radius:999px;padding:5px 14px;margin-bottom:16px}
+h1{font-size:30px;line-height:1.35;font-weight:900;letter-spacing:-.6px}
+h2{font-size:24px;line-height:1.4;font-weight:900;letter-spacing:-.4px;margin-bottom:10px}
+h1 em,h2 em{font-style:normal;color:var(--pur)}
+.lead{font-size:16.5px;color:var(--sub);margin-top:14px}
+.center{text-align:center}
+.sub{color:var(--sub);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 24px rgba(60,40,110,.06)}
+.dark{background:var(--night);color:#fff}
+.dark .sub,.dark .lead{color:var(--soft)}
+.dark h2 em{color:var(--hl)}
+.tint{background:var(--lav2)}
+
+/* 버튼 */
+.cta{display:block;width:100%;border:0;cursor:pointer;background:var(--pur);color:#fff;font:inherit;font-size:18px;font-weight:800;text-align:center;text-decoration:none;border-radius:14px;padding:18px 20px;box-shadow:0 8px 22px var(--glow);transition:transform .15s,background .15s}
+.cta:hover{background:var(--pur-d)}
+.cta:active{transform:translateY(1px)}
+.cta[disabled]{background:#B9AEC9;box-shadow:none;cursor:not-allowed}
+.cta small{display:block;font-size:13px;font-weight:600;opacity:.85;margin-top:2px}
+
+/* 목록 */
+.checks{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 46px;position:relative;font-weight:600}
+.checks li::before{content:"✕";position:absolute;left:16px;top:13px;width:20px;height:20px;border-radius:50%;background:#FCE7DC;color:var(--warn);font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.checks.ok li::before{content:"✓";background:var(--lav);color:var(--pur-d)}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 8px;text-align:center}
+.stat b{display:block;font-size:22px;font-weight:900;color:var(--pur)}
+.stat span{font-size:12.5px;color:var(--sub);line-height:1.4;display:block;margin-top:4px}
+
+.pillars{display:grid;gap:12px;margin-top:24px}
+.pillar{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.pillar .no{flex:none;width:40px;height:40px;border-radius:12px;background:var(--pur);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px}
+.pillar b{display:block;font-size:17px;margin-bottom:2px}
+.pillar p{font-size:14.5px;color:var(--sub)}
+
+/* 영상 */
+.video{position:relative;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.video video{width:100%;height:100%;display:block}
+.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;background:linear-gradient(135deg,var(--night2),var(--night));text-align:center;padding:20px}
+.video-ph .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:24px}
+.video-ph p{font-size:14px;color:#C9C2DC}
+.speed{display:flex;gap:6px;justify-content:flex-end;margin-top:8px}
+.speed button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+.speed button[aria-pressed="true"]{background:var(--pur);color:#fff;border-color:var(--pur)}
+
+/* 폼 */
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.field label{font-size:14px;font-weight:700}
+.field input{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--pur);box-shadow:0 0 0 3px var(--lav)}
+.agree{display:flex;flex-direction:column;gap:8px;margin:14px 0 16px;font-size:14px}
+.agree label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.agree input{margin-top:4px;width:18px;height:18px;accent-color:var(--pur);flex:none}
+.agree .all{font-weight:800;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.agree a{color:var(--sub);font-size:12.5px;margin-left:4px}
+.agree .gift{display:block;font-size:12.5px;color:var(--pur-d)}
+.err{color:var(--warn);font-size:13.5px;min-height:20px;margin-bottom:6px}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:12px;font-size:12.5px;color:var(--sub)}
+
+/* 진행 표시 */
+.journey{display:flex;gap:6px;margin:22px 0 0}
+.journey div{flex:1;text-align:center;font-size:12px;font-weight:700;color:var(--sub);padding-top:10px;border-top:4px solid var(--line)}
+.journey .on{color:var(--pur-d);border-color:var(--pur)}
+
+/* 확인 필요 표시 (배포 전 지울 것) */
+.todo{background:#FFF3C4;color:#7A5200;border-radius:4px;padding:0 4px;font-weight:700}
+
+/* 아래 고정 버튼 (모바일) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,248,253,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky .cta{max-width:600px;margin:0 auto;font-size:16px;padding:14px}
+
+/* 푸터·약관 */
+footer{background:var(--foot);color:#9A93AE;font-size:12.5px;line-height:1.8;padding:30px 20px 110px;text-align:center}
+footer button{background:none;border:0;color:#C9C2DC;font:inherit;text-decoration:underline;cursor:pointer;margin:0 6px}
+dialog.legal{border:0;border-radius:16px;max-width:560px;width:calc(100% - 32px);max-height:85vh;padding:0;margin:auto}
+dialog.legal::backdrop{background:rgba(15,10,30,.55)}
+.legal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.legal-head b{font-size:17px}
+.legal-head button{border:0;background:none;font-size:24px;cursor:pointer;color:var(--sub)}
+.legal-body{padding:18px 20px 24px;font-size:13.5px;line-height:1.85;white-space:pre-wrap;color:#333}
+
+@media (max-width:420px){
+  h1{font-size:26px} h2{font-size:21px}
+  .stat b{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
+
+:root{--pur:#7D55C7;--pur-d:#5B3A9E;--lav:#E8E2F5;--lav2:#F4F0FB;--line:#E2DCEE;--bg:#FAF8FD;--night:#17122A;--night2:#2A1F4A;--foot:#120E20;--gold:#E9C46A;--glow:rgba(125,85,199,.35);--hl:#B79BEB;}
+
+.hero{padding:40px 0 28px;text-align:center}
+.hero h1{font-size:28px}
+.hero .lead{margin-bottom:22px}
+.mt{margin-top:22px}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.vs div{border-radius:14px;padding:16px;font-size:14.5px}
+.vs .bad{background:#fff;border:1px solid var(--line)}
+.vs .bad b{color:var(--warn)}
+.vs .good{grid-column:1/-1;background:var(--pur);color:#fff;text-align:center;font-weight:700}
+.make{display:grid;gap:12px;margin-top:22px}
+.make .card{display:flex;gap:14px;align-items:flex-start;padding:18px}
+.make .ic{flex:none;font-size:26px;line-height:1}
+.make b{display:block;font-size:17px}
+.make p{font-size:14.5px;color:var(--sub)}
+.bonus{margin-top:14px;border:2px dashed var(--pur);border-radius:16px;padding:16px 18px;background:#fff}
+.bonus b{color:var(--pur-d)}
+.note{font-size:13px;color:var(--sub);margin-top:12px}
+.road{list-style:none;margin-top:24px;position:relative}
+.road li{position:relative;padding:0 0 22px 44px}
+.road li::before{content:"";position:absolute;left:15px;top:30px;bottom:0;width:2px;background:var(--line)}
+.road li:last-child::before{display:none}
+.road .n{position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--pur);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.road li.m3 .n{background:var(--night)}
+.road b{display:block;font-size:16px}
+.road em{font-style:normal;font-size:12.5px;font-weight:800;color:var(--pur-d);display:block}
+.road p{font-size:14.5px;color:var(--sub)}
+.rv{display:grid;gap:12px;margin-top:22px}
+.rv .card{padding:18px}
+.rv .big{background:var(--night);color:#fff;border:0;text-align:center}
+.rv .big b{display:block;font-size:26px;color:var(--gold)}
+.rv .qt{display:block;font-size:15px;margin-bottom:6px}
+.rv small{color:var(--pur-d);font-weight:800}
+.slider{display:flex;align-items:flex-start;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 0 10px;margin-top:18px;-webkit-overflow-scrolling:touch}
+.slider img{flex:none;width:72%;max-width:300px;border-radius:12px;scroll-snap-align:center;border:1px solid var(--line);background:#fff}
+.slider.wide img{width:85%;max-width:420px;aspect-ratio:4/3;object-fit:cover}
+.hint{font-size:12.5px;color:var(--sub);text-align:center}
+.story p{margin-top:14px;font-size:15.5px}
+.story .ph{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.story .ph figure{font-size:12.5px;color:#C9C2DC;text-align:center}
+.story .ph img{border-radius:12px;margin-bottom:6px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.prof{display:flex;gap:16px;align-items:center;margin-top:20px}
+.prof img{width:110px;height:130px;object-fit:cover;border-radius:14px;flex:none}
+.prof ul{list-style:none;font-size:14px}
+.prof li::before{content:"✓ ";color:var(--pur);font-weight:900}
+.get{display:grid;gap:10px;margin-top:20px}
+.steps{list-style:none;margin-top:20px;display:grid;gap:10px}
+.steps li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.steps .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--lav);color:var(--pur-d);font-weight:900;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{display:block}
+.steps p{font-size:14px;color:var(--sub)}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 16px;margin-top:10px}
+summary{cursor:pointer;font-weight:700;padding:15px 0;list-style:none}
+summary::after{content:"+";float:right;color:var(--pur);font-weight:900}
+details[open] summary::after{content:"−"}
+details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
+/* 신청 창 */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(15,10,30,.6);display:none;align-items:center;justify-content:center;padding:12px}
+.modal.open{display:flex}
+.mbox{background:#fff;border-radius:18px;width:100%;max-width:560px;height:min(92vh,860px);display:flex;flex-direction:column;overflow:hidden}
+.mhead{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.mhead .dots{display:flex;gap:6px;flex:1}
+.mhead .dots span{flex:1;height:5px;border-radius:9px;background:var(--line)}
+.mhead .dots span.on{background:var(--pur)}
+.mhead button{border:0;background:none;font-size:26px;cursor:pointer;color:var(--sub);line-height:1}
+.mstep{flex:1;display:none;flex-direction:column;min-height:0}
+.mstep.on{display:flex}
+.mstep iframe{flex:1;width:100%;border:0;min-height:0}
+.mfoot{padding:12px 14px;border-top:1px solid var(--line);background:var(--lav2)}
+.mfoot p{font-size:13px;color:var(--sub);margin-bottom:8px;text-align:center}
+.mfoot .cta{font-size:16px;padding:14px}
+.pay{padding:22px 20px;overflow-y:auto}
+.pay h3{font-size:20px;margin-bottom:6px}
+.acct{background:var(--lav2);border-radius:14px;padding:16px;margin:16px 0;text-align:center}
+.acct b{font-size:20px;display:block;margin:4px 0}
+.acct button{border:1px solid var(--pur);background:#fff;color:var(--pur-d);border-radius:10px;padding:7px 14px;font:inherit;font-weight:700;cursor:pointer}
+.pay ul{list-style:none;font-size:14.5px;display:grid;gap:6px}
+.pay li::before{content:"✔ ";color:var(--pur)}
+</style>
+<script>window.F770={"PRODUCT": "고가상품 세일즈 시스템 1:1마스터", "SOURCE": "funnel770", "PIXEL": "1604828611189459", "STEP2_URL": "https://gnamessenger.github.io/aura-seminar-watch/", "STEP3_URL": "https://gnamessenger.github.io/aura-consult/", "VIDEO_STEP2": "", "POSTER_STEP2": "", "VIDEO_STEP3": "", "POSTER_STEP3": "", "UNLOCK_SEC": 90, "CAL_BTN_SEC": 30, "FORM_URL": "https://docs.google.com/forms/d/e/1FAIpQLSfJ1KL36MAVhkFyyM2mRuFYSg-Q6uBWxpqd694iFVZNzPaOmQ/viewform", "FORM_ENTRY": {"name": "entry.190185620", "phone": "entry.465795657", "email": "entry.2012915602"}, "CAL_URL": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2pRa2V5-x6gXVeRbTekylXnM_m7uO7hTqvniEhehQLgCkALDmjg2qfGiq1yhQJIaxWW1ex2qiX", "BANK_NO": "100000363187", "FIREBASE": {"apiKey": "AIzaSyBjL-AdZVHBZdsvzqniuPDynk7G3-kH6yU", "authDomain": "salesscript-87136.firebaseapp.com", "projectId": "salesscript-87136", "appId": "1:91082261854:web:73018d6b146d69db6b3bcf"}};</script>
+<script>/* 세 단계 공통: 연락처 넘기기 · 메타 픽셀 · 약관 창 · 아래 고정 버튼 · 배속 */
+(function(){
+  var C = window.F770;
+
+  // 1) 앞 단계에서 넘어온 연락처를 받아 두고, 주소창에서는 바로 지운다
+  //    (픽셀이 이름·전화번호가 든 주소를 메타로 보내지 않게, 픽셀보다 먼저 실행)
+  var KEY = 'f770_lead';
+  var q = new URLSearchParams(location.search);
+  var lead = {};
+  try { lead = JSON.parse(sessionStorage.getItem(KEY) || '{}'); } catch(e){}
+  if (q.get('n') || q.get('p') || q.get('e')) {
+    lead = { name: q.get('n') || '', phone: q.get('p') || '', email: q.get('e') || '' };
+    try { sessionStorage.setItem(KEY, JSON.stringify(lead)); } catch(e){}
+    ['n','p','e'].forEach(function(k){ q.delete(k); });
+    var rest = q.toString();
+    history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+  }
+  C.lead = lead;
+  C.saveLead = function(l){ C.lead = l; try { sessionStorage.setItem(KEY, JSON.stringify(l)); } catch(e){} };
+  C.nextUrl = function(base){
+    var l = C.lead || {}, p = new URLSearchParams();
+    if (l.name) p.set('n', l.name);
+    if (l.phone) p.set('p', l.phone);
+    if (l.email) p.set('e', l.email);
+    // 광고 추적용 utm 값은 그대로 이어 붙임
+    new URLSearchParams(location.search).forEach(function(v,k){ if (/^utm_|^fbclid$/.test(k)) p.set(k, v); });
+    var s = p.toString();
+    return base + (s ? '?' + s : '');
+  };
+
+  // 2) 메타 픽셀
+  if (C.PIXEL) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', C.PIXEL);
+    fbq('track', 'PageView');
+  }
+  C.track = function(ev, data){
+    try { if (window.fbq) fbq(ev.indexOf('custom:') === 0 ? 'trackCustom' : 'track', ev.replace('custom:',''), Object.assign({ content_name: C.PRODUCT }, data || {})); } catch(e){}
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // 3) 약관 창
+    document.querySelectorAll('[data-legal]').forEach(function(b){
+      b.addEventListener('click', function(e){
+        e.preventDefault();
+        var d = document.getElementById('legal-' + b.dataset.legal);
+        if (d && d.showModal) d.showModal();
+      });
+    });
+    document.querySelectorAll('dialog.legal').forEach(function(d){
+      d.querySelector('[data-close]').addEventListener('click', function(){ d.close(); });
+      d.addEventListener('click', function(e){ if (e.target === d) d.close(); });
+    });
+
+    // 4) 아래 고정 버튼: 본문 버튼(.watch)이 화면에 없을 때만 보이기
+    var sticky = document.querySelector('.sticky');
+    var watched = document.querySelectorAll('.watch');
+    if (sticky && watched.length && 'IntersectionObserver' in window) {
+      var visible = new Set();
+      var update = function(){
+        sticky.classList.toggle('show', window.scrollY > 400 && visible.size === 0 && !sticky.hasAttribute('data-locked'));
+      };
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){ en.isIntersecting ? visible.add(en.target) : visible.delete(en.target); });
+        update();
+      });
+      watched.forEach(function(w){ io.observe(w); });
+      window.addEventListener('scroll', update, { passive: true });
+    }
+
+    // 5) 배속 버튼
+    document.querySelectorAll('.speed').forEach(function(box){
+      var v = document.getElementById(box.dataset.for);
+      box.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if (!b || !v) return;
+        v.playbackRate = +b.dataset.rate;
+        box.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+      });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<div class="ribbon">진단상담 신청 전 <b>필독</b> · 한 달에 5명만 받습니다</div>
+
+<header class="hero wrap">
+  <span class="eyebrow">고가상품 세일즈 시스템 1:1마스터</span>
+  <h1>고가상품을 <em>파는 화법</em>과<br>손님이 <em>찾아오는 구조</em>를<br>3개월 1:1로 함께 만듭니다</h1>
+  <p class="lead">신청하시기 전에 이 영상부터 함께 봐 주세요.</p>
+  <div class="video" id="otbox"></div>
+  <div class="speed" data-for="ot" hidden><button type="button" data-rate="1" aria-pressed="true">1x</button><button type="button" data-rate="1.5" aria-pressed="false">1.5x</button><button type="button" data-rate="2" aria-pressed="false">2x</button></div>
+  <button class="cta watch mt" type="button" data-open>1:1 진단상담 신청하기<small>진단비 5만원 · 정규 과정 등록 시 전액 차감</small></button>
+</header>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center">화법만으로도, 광고만으로도<br><em>고가상품은 안 팔립니다</em></h2>
+    <div class="vs">
+      <div class="bad"><b>화법만 있으면</b><br>만날 손님이 없어서 실력을 쓸 데가 없어요</div>
+      <div class="bad"><b>광고만 있으면</b><br>연락처는 쌓이는데 상담에서 계약이 안 돼요</div>
+      <div class="good">손님이 찾아오는 구조 + 찾아온 손님을 계약으로 바꾸는 화법<br>둘이 같이 돌아가야 고가상품이 팔립니다</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="center">3개월 동안 <em>직접 만들어 드리는 것</em></h2>
+  <p class="sub center">방법만 알려 드리고 끝내지 않아요. 고객님 상품에 맞춰 같이 만들어서 손에 쥐여 드립니다.</p>
+  <div class="make">
+    <div class="card"><span class="ic">🗣️</span><div><b>내 상품 고가 세일즈 화법 대본</b><p>20년 현장에서 검증한 화법을 고객님 상품·고객에 맞춰 상담 대본으로 만들고, 1:1 롤플레이로 입에 붙여 드려요.</p></div></div>
+    <div class="card"><span class="ic">🧭</span><div><b>3단계 웨비나 사이트</b><p>지금 보고 계신 것처럼 신청 → 특강 영상 → 진단상담 신청으로 이어지는 페이지를 고객님 상품으로 만들어 드려요.</p></div></div>
+    <div class="card"><span class="ic">🔔</span><div><b>예약·알림톡 자동화</b><p>상담 예약이 들어오면 접수·입금·확정 안내가 카카오 알림톡으로 저절로 나가게 연결해 드려요.</p></div></div>
+    <div class="card"><span class="ic">📈</span><div><b>메타 광고 세팅·운영</b><p>광고 계정·픽셀 세팅부터 광고 문구·소재, 광고 시작까지 같이 하고, 3개월째에는 결과를 보며 고쳐 나가요.</p></div></div>
+  </div>
+  <div class="bonus"><b>🎁 보너스 · SNS 자동화 방법</b><br>제가 지금 실제로 쓰고 있는 SNS 자동 예약 방법(카드뉴스·릴스·블로그를 미리 걸어 두는 법)을 알려 드려요.</div>
+  <p class="note">※ 메타 광고비는 고객님이 광고 계정에서 직접 결제합니다. 광고 성과는 상품·예산·시장에 따라 달라지며, 특정 매출을 보장하지 않습니다.</p>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>지금 보고 계신 이 페이지가<br><em>바로 그 구조</em>입니다</h2>
+    <p class="lead">광고를 보고 들어와 특강을 신청하고, 영상을 보고, 지금 이 진단상담 페이지까지 오셨죠. 예약을 하시면 안내 알림톡이 저절로 나갑니다. 제가 직접 만들어서 매일 돌리고 있는 구조이고, 3개월 동안 이걸 고객님 상품으로 똑같이 만들어 드립니다.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="center">3개월 진행 순서</h2>
+  <p class="sub center">1~2개월 주 2회 1:1 (총 16회) · 3개월째 주 1회 Zoom 점검<br>본수업 2시간 30분 · 보충 1시간</p>
+  <ol class="road">
+    <li><span class="n">1주</span><em>1~4회</em><b>진단 · 고가상품 설계</b><p>지금 상품·고객·가격을 진단하고, 고가로 팔 수 있는 상품 구성을 같이 잡아요.</p></li>
+    <li><span class="n">3주</span><em>5~8회</em><b>고가 세일즈 화법</b><p>내 상품 상담 대본을 만들고 1:1 롤플레이로 연습해요. 특강 영상 대본도 이때 같이 써요.</p></li>
+    <li><span class="n">5주</span><em>9~12회</em><b>퍼널 제작 · 자동화 연결</b><p>3단계 웨비나 사이트를 만들고, 예약·알림톡 자동화를 연결해요.</p></li>
+    <li><span class="n">7주</span><em>13~16회</em><b>메타 광고 세팅 · 시작</b><p>광고 계정·픽셀 세팅, 광고 문구·소재를 만들고 광고를 켜요.</p></li>
+    <li class="m3"><span class="n">3달</span><em>Zoom 주 1회 · 4회</em><b>광고 결과 점검</b><p>들어온 숫자를 같이 보면서 광고·페이지·상담 화법을 고쳐 나가요.</p></li>
+  </ol>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center">화법 수강생 후기는<br><em>거짓말하지 않습니다</em></h2>
+    <div class="rv">
+      <div class="card big">100명 관리 설계사님의 변화<b>월 300만원 → 월 3,000만원</b>법인 계약 두 건, 혼자 성사</div>
+      <div class="card"><p class="qt">"월 500~700만 원 매출이 딱 그 수준에서 멈춰 있었어요. 화법 하나 바꿨을 뿐인데 이런 결과가 나올 줄은 몰랐습니다."</p><small>경력 설계사님 · 100만원 상품 3건 계약 → 3주 누적 3,000만원, 지점 1등</small></div>
+      <div class="card"><p class="qt">"보험도, 영업도 태어나서 처음이었어요. 정해진 화법을 그대로 따라 했을 뿐인데…"</p><small>신입 설계사님 · 조기마감 1등 기록</small></div>
+    </div>
+    <div class="slider" aria-label="후기 캡처"><img src="reviews/r01.jpg" alt="수강생 후기 캡처 1" loading="lazy"><img src="reviews/r02.jpg" alt="수강생 후기 캡처 2" loading="lazy"><img src="reviews/r03.jpg" alt="수강생 후기 캡처 3" loading="lazy"><img src="reviews/r04.jpg" alt="수강생 후기 캡처 4" loading="lazy"><img src="reviews/r05.jpg" alt="수강생 후기 캡처 5" loading="lazy"><img src="reviews/r06.jpg" alt="수강생 후기 캡처 6" loading="lazy"><img src="reviews/r07.jpg" alt="수강생 후기 캡처 7" loading="lazy"><img src="reviews/r08.jpg" alt="수강생 후기 캡처 8" loading="lazy"><img src="reviews/r09.jpg" alt="수강생 후기 캡처 9" loading="lazy"><img src="reviews/r10.jpg" alt="수강생 후기 캡처 10" loading="lazy"><img src="reviews/r11.jpg" alt="수강생 후기 캡처 11" loading="lazy"><img src="reviews/r12.jpg" alt="수강생 후기 캡처 12" loading="lazy"><img src="reviews/r13.jpg" alt="수강생 후기 캡처 13" loading="lazy"><img src="reviews/r14.jpg" alt="수강생 후기 캡처 14" loading="lazy"><img src="reviews/r15.jpg" alt="수강생 후기 캡처 15" loading="lazy"></div>
+    <p class="hint">← 옆으로 넘겨 보세요 →</p>
+  </div>
+</section>
+
+<section class="dark story">
+  <div class="wrap">
+    <h2>천막집에서 자란 아이가<br><em>세일즈 하나로</em> 인생을 바꿨습니다</h2>
+    <p>부산의 천막집에서 나고 자랐습니다. 부모님이 피땀 흘려 마련한 집도 IMF로 날아갔고, 다섯 식구가 18평에서 다시 시작해야 했습니다.</p>
+    <div class="ph">
+      <figure><img src="story/story-family.jpg" alt="어린 시절 부모님과 함께" loading="lazy">그 시절, 부모님과 함께</figure>
+      <figure><img src="story/story-apartment.jpg" alt="다섯 식구가 다시 시작한 18평 아파트" loading="lazy">다섯 식구가 다시 시작한 18평</figure>
+    </div>
+    <p>스무 살, 길거리 모자 장사가 제 인생 첫 세일즈였습니다. 학습지 영업 6개월 만에 전국 상, 보험 영업 4년, 그리고 지식창업까지. 20년 동안 저를 먹여 살린 건 오직 세일즈였습니다.</p>
+    <p>그리고 이제는 그 화법이 <b>사람을 만나는 구조</b> 위에서 돌아가게 만들고 있습니다. 화법과 구조, 둘 다 고객님 상품에 맞춰 그대로 전해 드립니다.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="center">강사 소개</h2>
+  <div class="prof">
+    <img src="story/instructor.jpg" alt="이지나 원장" loading="lazy">
+    <div><b style="font-size:18px">이지나 원장</b><p class="sub" style="margin-bottom:8px">아우라세일즈 평생교육원</p>
+      <ul><li>세일즈 20년</li><li>1:1 맞춤 컨설팅·수업 1,000회 이상</li><li>교육부·중소벤처기업부 인정 자격증 발급 기관</li><li>저서 5권 이상 · 교보문고 MD 추천</li><li>대한민국 예술인</li></ul>
+    </div>
+  </div>
+  <div class="slider wide" aria-label="현장 강의 사진"><img src="lectures/lec01.jpg" alt="현장 강의 사진 1" loading="lazy"><img src="lectures/lec02.jpg" alt="현장 강의 사진 2" loading="lazy"><img src="lectures/lec03.jpg" alt="현장 강의 사진 3" loading="lazy"><img src="lectures/lec04.jpg" alt="현장 강의 사진 4" loading="lazy"><img src="lectures/lec05.jpg" alt="현장 강의 사진 5" loading="lazy"><img src="lectures/lec06.jpg" alt="현장 강의 사진 6" loading="lazy"><img src="lectures/lec07.jpg" alt="현장 강의 사진 7" loading="lazy"><img src="lectures/lec08.jpg" alt="현장 강의 사진 8" loading="lazy"><img src="lectures/lec09.jpg" alt="현장 강의 사진 9" loading="lazy"><img src="lectures/lec10.jpg" alt="현장 강의 사진 10" loading="lazy"></div>
+  <p class="hint">현장 강의 스케치 · 옆으로 넘겨 보세요</p>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center">한 달에 <em>딱 5명</em>만 받습니다</h2>
+    <p class="sub center">사이트·알림톡·광고를 한 분 한 분 직접 같이 만드는 과정이라, 제가 책임질 수 있는 인원만 받습니다.</p>
+    <h2 class="center" style="font-size:19px;margin-top:30px">진단상담에서 받으시는 것</h2>
+    <div class="get">
+      <div class="pillar"><span class="no">1</span><div><b>상품·고객·가격 진단</b><p>지금 상품이 고가로 팔릴 수 있는지, 무엇을 바꿔야 하는지 짚어 드려요</p></div></div>
+      <div class="pillar"><span class="no">2</span><div><b>내 상품 퍼널 설계도 초안</b><p>신청 → 특강 → 상담까지 내 상품이면 어떻게 흘러가야 할지 그려 드려요</p></div></div>
+      <div class="pillar"><span class="no">3</span><div><b>진단 결과 리포트</b><p>상담 내용을 정리해서 다시 보실 수 있게 보내 드려요</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="center">성형수술도, 1,500만원짜리 시계도<br>상담 없이 사지 않습니다</h2>
+  <p class="sub center">신청은 이렇게 진행돼요</p>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>신청서 작성</b><p>6문항, 1~2분이면 끝나요</p></div></li>
+    <li><span class="n">2</span><div><b>상담 날짜 고르기</b><p>온라인(평일) 또는 오프라인(일요일) 중에서 골라요</p></div></li>
+    <li><span class="n">3</span><div><b>진단비 5만원 입금</b><p>정규 과정 등록 시 전액 차감돼요</p></div></li>
+    <li><span class="n">4</span><div><b>1:1 진단상담 (1시간 30분)</b><p>20년 세일즈 전문가와 직접 만나 진단받아요</p></div></li>
+  </ol>
+  <button class="cta watch mt" type="button" data-open>1:1 진단상담 신청하기<small>한 달 5명 · 진단비 5만원</small></button>
+</section>
+
+<section class="wrap" style="padding-top:0">
+  <h2 class="center">자주 묻는 질문</h2>
+  <details><summary>컴퓨터·코딩을 하나도 몰라도 되나요?</summary><p>네. 사이트와 자동화는 같이 만들어 드리고, 고객님은 어떻게 돌아가는지와 고치는 방법만 익히시면 돼요.</p></details>
+  <details><summary>광고비는 따로 드나요?</summary><p>네. 메타 광고비는 고객님 광고 계정에서 직접 결제하세요. 얼마로 시작할지는 진단상담에서 상품과 목표에 맞춰 같이 정해요.</p></details>
+  <details><summary>제 업종도 되나요?</summary><p>코칭·강의·컨설팅·보험·전문 서비스처럼 상담을 거쳐 파는 상품이라면 맞아요. 맞지 않는 경우엔 진단상담에서 솔직하게 말씀드려요.</p></details>
+  <details><summary>가격은 얼마인가요?</summary><p>몇백만 원 수준이에요. 정확한 금액과 진행 방식은 진단상담에서 안내해 드리고, 진단비 5만원은 등록 시 전액 차감돼요.</p></details>
+  <details><summary>수업은 어떻게 하나요?</summary><p>1~2개월은 주 2회 1:1(총 16회), 본수업은 2시간 30분, 보충은 1시간이에요. 3개월째는 주 1회 Zoom으로 광고 결과를 같이 봐요.</p></details>
+</section>
+
+<div class="sticky"><button class="cta" type="button" data-open>1:1 진단상담 신청하기</button></div>
+<footer>
+  아우라세일즈 | 대표 조혜영 | 사업자등록번호 825-90-01995<br>
+  경기도 화성시 매송고색로 366, 205호 | 전화 010-4242-9810<br>
+  <button type="button" data-legal="terms">이용약관</button><button type="button" data-legal="privacy">개인정보처리방침</button><br>
+  Copyright ⓒ 아우라세일즈. All rights reserved.
+</footer>
+<dialog class="legal" id="legal-terms"><div class="legal-head"><b>이용약관</b><button type="button" data-close aria-label="닫기">&times;</button></div><div class="legal-body">제1조 (목적)
+이 약관은 아우라세일즈(이하 "회사")가 제공하는 무료 특강 및 1:1 진단상담 서비스(이하 "서비스")의 이용조건 및 절차, 회사와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+
+제2조 (서비스의 내용)
+1. 고가상품 세일즈·퍼널 자동화 관련 온라인 특강 제공
+2. 1:1 맞춤형 진단상담(온라인 Zoom 또는 오프라인) 제공
+3. 기타 회사가 정하는 부가서비스
+
+제3조 (이용계약의 성립)
+진단상담 이용계약은 이용자가 신청서 작성 및 상담 일정 예약을 완료하고, 회사가 정한 진단상담비를 결제함으로써 성립합니다.
+
+제4조 (서비스 이용요금 및 결제)
+1. 1:1 진단상담비는 50,000원이며, 계좌이체 방식으로 결제합니다.
+2. 진단상담 후 정규 과정에 등록하시는 경우 진단상담비 50,000원은 정규 과정 수강료에서 전액 차감됩니다.
+
+제5조 (청약철회 및 환불)
+1. 이용자는 상담 예정일 기준 24시간 전까지 취소를 요청할 경우, 결제한 진단상담비 전액을 환불받을 수 있습니다.
+2. 상담 예정일 기준 24시간 이내 취소 또는 무단 불참(노쇼)의 경우, 환불이 제한될 수 있습니다.
+3. 환불 요청은 카카오톡 채널을 통해 접수하며, 확인 후 영업일 기준 5일 이내 처리합니다.
+
+제6조 (회사의 의무)
+회사는 관련 법령과 이 약관이 금지하거나 미풍양속에 반하는 행위를 하지 않으며, 안정적인 서비스 제공을 위해 노력합니다.
+
+제7조 (이용자의 의무)
+이용자는 신청서 작성 시 정확한 정보를 제공해야 하며, 허위 정보로 인해 발생하는 불이익에 대해 회사는 책임지지 않습니다.
+
+제8조 (면책조항)
+회사는 천재지변, 이용자의 귀책사유 등 회사가 통제할 수 없는 사유로 인한 서비스 중단에 대해 책임을 지지 않습니다. 특강과 상담에서 소개하는 실적은 강사 본인 및 수강생의 과거 사례이며, 같은 결과를 보장하지 않습니다.
+
+부칙
+이 약관은 2026년 10월 3일부터 시행합니다.</div></dialog>
+<dialog class="legal" id="legal-privacy"><div class="legal-head"><b>개인정보처리방침</b><button type="button" data-close aria-label="닫기">&times;</button></div><div class="legal-body">아우라세일즈(이하 "회사")는 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
+
+1. 수집하는 개인정보 항목
+- 필수: 이름, 휴대폰번호, 이메일 주소
+- 진단상담 신청 시: 신청서 응답 내용, 상담 일정
+- 결제 시: 입금자명(계좌이체 확인용)
+- 자동 수집: 방문 기록, 기기·브라우저 정보(메타 픽셀)
+
+2. 수집 및 이용 목적
+- 특강 시청 안내, 진단상담 예약·진행 및 안내(알림톡·문자·이메일)
+- 진단상담비 결제 확인, 문의 응대
+- [선택 동의 시] 새 특강·무료 자료·교육 과정 등 광고성 정보 발송
+- 광고 성과 측정
+
+3. 보유 및 이용 기간
+수집일로부터 3년간 보유하며, 이용자가 삭제를 요청하면 지체 없이 파기합니다. 다만 관계 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.
+
+4. 동의 거부 권리
+이용자는 개인정보 수집·이용에 동의하지 않을 수 있습니다. 다만 필수 항목에 동의하지 않으시면 특강 시청 안내를 받으실 수 없습니다. 광고성 정보 수신은 선택이며, 동의하지 않아도 특강은 그대로 보실 수 있습니다.
+
+5. 개인정보 처리위탁 및 국외 이전
+- Google(Firebase·Google Forms·Google Calendar): 신청 정보 저장, 신청서 접수, 일정 예약 관리 — 미국 등 Google 서버
+- 알리고(Aligo): 카카오 알림톡 발송
+- Meta Platforms(메타 픽셀): 광고 성과 측정 — 미국
+
+6. 제3자 제공
+회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만 이용자의 동의가 있거나 법령에 특별한 규정이 있는 경우는 예외로 합니다.
+
+7. 이용자의 권리
+이용자는 언제든지 본인의 개인정보 열람·정정·삭제 및 광고성 정보 수신 철회를 요청할 수 있습니다. 카카오톡 채널 또는 아래 연락처로 요청해 주세요.
+
+8. 개인정보 보호책임자
+- 성명: 조혜영
+- 연락처: 010-4242-9810
+
+시행일: 2026년 10월 3일</div></dialog>
+
+
+<!-- 신청 창: 신청서 → 날짜 고르기 → 입금 안내 -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="1:1 진단상담 신청">
+  <div class="mbox">
+    <div class="mhead"><div class="dots"><span class="on"></span><span></span><span></span></div><button type="button" id="mclose" aria-label="닫기">&times;</button></div>
+    <div class="mstep on" data-s="1">
+      <iframe id="formFrame" title="진단상담 신청서" loading="lazy"></iframe>
+      <div class="mfoot"><p>신청서 <b>제출</b>을 누르신 뒤 아래 버튼을 눌러 주세요</p><button class="cta" type="button" id="toCal">제출했어요 → 상담 날짜 고르기</button></div>
+    </div>
+    <div class="mstep" data-s="2">
+      <iframe id="calFrame" title="상담 날짜 예약" loading="lazy"></iframe>
+      <div class="mfoot"><p id="calMsg">날짜를 고르고 <b>예약</b>까지 마쳐 주세요</p><button class="cta" type="button" id="toPay" disabled>예약 완료했어요 → 입금 안내 보기</button></div>
+    </div>
+    <div class="mstep" data-s="3">
+      <div class="pay">
+        <h3>예약이 접수됐어요 🙌</h3>
+        <p class="sub">아래 계좌로 진단비를 보내 주시면 상담이 확정돼요.</p>
+        <div class="acct">계좌이체 (카드 결제 X)<b>우체국 100-0003-63187</b><button type="button" id="copy">계좌번호 복사</button><p class="sub" style="margin-top:8px">50,000원 · 예금주 조혜영(아우라세일즈)</p></div>
+        <ul>
+          <li>입금 기한: 예약 후 24시간 이내 (상담이 그보다 빠르면 상담 3시간 전까지)</li>
+          <li>입금자명은 신청하신 <b>성함</b>으로 해 주세요</li>
+          <li>입금이 확인되면 확정 안내를 알림톡으로 보내 드려요</li>
+          <li>정규 과정 등록 시 5만원은 전액 차감돼요</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var C = window.F770;
+  var ot = document.getElementById('otbox');
+  if (C.VIDEO_STEP3) {
+    ot.innerHTML = '<video id="ot" controls playsinline preload="metadata" controlslist="nodownload" disablepictureinpicture' + (C.POSTER_STEP3 ? ' poster="' + C.POSTER_STEP3 + '"' : '') + '><source src="' + C.VIDEO_STEP3 + '" type="video/mp4"></video>';
+    document.querySelector('.speed').hidden = false;
+  } else {
+    ot.innerHTML = '<div class="video-ph"><div class="play">▶</div><b>OT 영상 자리</b><p>영상이 준비되면 여기에 들어가요</p></div>';
+  }
+
+  var modal = document.getElementById('modal'), dots = modal.querySelectorAll('.dots span');
+  var formFrame = document.getElementById('formFrame'), calFrame = document.getElementById('calFrame');
+  function show(n){
+    modal.querySelectorAll('.mstep').forEach(function(s){ s.classList.toggle('on', +s.dataset.s === n); });
+    dots.forEach(function(d, i){ d.classList.toggle('on', i < n); });
+  }
+  function formSrc(){
+    var l = C.lead || {}, p = new URLSearchParams({ embedded: 'true' });
+    if (l.name || l.phone || l.email) {
+      p.set('usp', 'pp_url');
+      if (l.name) p.set(C.FORM_ENTRY.name, l.name);
+      if (l.phone) p.set(C.FORM_ENTRY.phone, l.phone);
+      if (l.email) p.set(C.FORM_ENTRY.email, l.email);
+    }
+    return C.FORM_URL + '?' + p.toString();
+  }
+  var opened = false;
+  document.querySelectorAll('[data-open]').forEach(function(b){
+    b.addEventListener('click', function(){
+      if (!opened) { formFrame.src = formSrc(); opened = true; C.track('InitiateCheckout', { value: 50000, currency: 'KRW' }); }
+      modal.classList.add('open'); document.body.style.overflow = 'hidden';
+    });
+  });
+  function close(){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('mclose').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if (e.target === modal) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+
+  // 신청서를 제출하면 구글폼이 '응답 기록됨' 화면으로 다시 로드됨 → 두 번째 로드부터 버튼 강조
+  var loads = 0, toCal = document.getElementById('toCal');
+  formFrame.addEventListener('load', function(){ loads++; if (loads >= 2) toCal.firstChild.textContent = '✅ 제출 확인 → 상담 날짜 고르기'; });
+  toCal.addEventListener('click', function(){
+    if (!calFrame.src) calFrame.src = C.CAL_URL;
+    C.track('CompleteRegistration');
+    show(2);
+    var toPay = document.getElementById('toPay'), msg = document.getElementById('calMsg'), s = C.CAL_BTN_SEC;
+    (function t(){ if (s <= 0) { toPay.disabled = false; msg.innerHTML = '날짜를 고르고 <b>예약</b>까지 마치셨나요?'; return; } msg.innerHTML = '날짜를 고르고 <b>예약</b>까지 마쳐 주세요 · ' + s + '초 뒤 다음 버튼이 열려요'; s--; setTimeout(t, 1000); })();
+  });
+  document.getElementById('toPay').addEventListener('click', function(){ C.track('Schedule'); show(3); });
+  document.getElementById('copy').addEventListener('click', function(){
+    var b = this;
+    navigator.clipboard.writeText(C.BANK_NO).then(function(){ b.textContent = '복사됐어요 ✓'; }, function(){ b.textContent = C.BANK_NO; });
+  });
+});
+</script>
+</body>
+</html>
