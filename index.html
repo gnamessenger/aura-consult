@@ -115,7 +115,7 @@ dialog.legal::backdrop{background:rgba(15,10,30,.55)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
 
-:root{--pur:#127C7A;--pur-d:#0C5C5B;--lav:#DCF0EF;--lav2:#EEF7F7;--line:#D2E7E6;--bg:#F7FBFB;--night:#0D2A2C;--night2:#164446;--foot:#091E20;--gold:#FF9E7A;--glow:rgba(18,124,122,.3);--hl:#FF9E7A;}
+:root{--pur:#2EC4B6;--night:#04050C;--gold:#FFB38F;--lav:#0B1424;}
 
 .hero{padding:40px 0 28px;text-align:center}
 .hero h1{font-size:28px}
@@ -143,6 +143,48 @@ dialog.legal::backdrop{background:rgba(15,10,30,.55)}
 .road b{display:block;font-size:16px}
 .road em{font-style:normal;font-size:12.5px;font-weight:800;color:var(--pur-d);display:block}
 .road p{font-size:14.5px;color:var(--sub)}
+.promise{display:grid;gap:12px;margin-top:22px}
+.pm{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 18px 66px;position:relative}
+.pm .ic{position:absolute;left:18px;top:18px;font-size:30px;line-height:1}
+.pm b{display:block;font-size:19px;font-weight:900;color:var(--pur);margin-bottom:4px}
+.pm p{font-size:14.5px;color:var(--sub)}
+.pm u{text-decoration:none;color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%,rgba(46,196,182,.28) 0)}
+.cmp{margin-top:18px;border:1px solid var(--line);border-radius:16px;overflow:hidden;font-size:13px}
+.cmp .row{display:grid;grid-template-columns:1.05fr 1fr 1fr 1.15fr}
+.cmp .row span{padding:11px 8px;border-top:1px solid var(--line);text-align:center;line-height:1.4}
+.cmp .row span:first-child{text-align:left;font-weight:700;color:var(--ink)}
+.cmp .row span{color:var(--sub)}
+.cmp .head span{border-top:0;font-weight:800;color:var(--ink);font-size:13.5px}
+.cmp .me{background:rgba(46,196,182,.12);color:var(--ink)!important;font-weight:800}
+.cmp .head .me{background:var(--pur);color:#fff!important}
+.plan-sum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0 18px}
+.plan-sum div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 6px;text-align:center}
+.plan-sum b{display:block;font-size:22px;font-weight:900;color:var(--pur)}
+.plan-sum span{display:block;font-size:12px;color:var(--sub);line-height:1.45;margin-top:2px}
+.month{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 16px 6px;margin-top:12px}
+.month .mh{display:flex;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.month .tag{background:var(--pur);color:#fff;font-size:12.5px;font-weight:800;border-radius:999px;padding:3px 10px}
+.month.m3 .tag{background:#E07A5F}
+.month .mh b{font-size:16px}
+.month .mh small{margin-left:auto;font-size:13px;font-weight:700;color:var(--sub)}
+.month .step{display:flex;gap:12px;padding:12px 0}
+.month .step+.step{border-top:1px dashed var(--line)}
+.month .wk{flex:none;width:58px;font-size:13px;font-weight:800;color:var(--pur);padding-top:2px}
+.month .step b{font-size:15.5px}
+.month .step small{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:0 7px}
+.month .step p{font-size:14px;color:var(--sub);margin-top:2px}
+.carousel{position:relative;overflow:hidden;border-radius:18px;margin-top:18px;touch-action:pan-y;user-select:none;-webkit-user-select:none;border:1px solid var(--line)}
+.carousel .track{display:flex;transition:transform .35s ease}
+.carousel .track.drag{transition:none}
+.carousel img{flex:0 0 100%;width:100%;pointer-events:none;-webkit-user-drag:none}
+.carousel.rev img{aspect-ratio:1/1;object-fit:contain;background:#fff;padding:10px}
+.carousel.lec img{aspect-ratio:4/3;object-fit:cover}
+.carousel .nav{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(10,14,24,.55);color:#fff;font-size:24px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;padding-bottom:3px}
+.carousel .prev{left:8px}.carousel .next{right:8px}
+.carousel .count{position:absolute;right:10px;bottom:10px;background:rgba(10,14,24,.6);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:2px 9px}
+.dots{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:10px}
+.dots button{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer}
+.dots button[aria-current="true"]{background:var(--pur);width:18px;border-radius:4px}
 .rv{display:grid;gap:12px;margin-top:22px}
 .rv .card{padding:18px}
 .rv .big{background:var(--night);color:#fff;border:0;text-align:center}
@@ -278,7 +320,154 @@ details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
   });
 })();
 </script>
-</head>
+<meta name="theme-color" content="#04050C"><style>/* 우주 테마: 검은 배경 + 별 + 유리 카드. 공통 CSS와 페이지 CSS 뒤에 붙여서 덮어씀 */
+:root{
+  --pur:#2EC4B6; --pur-d:#1FA396; --ink:#EEF4F4; --sub:#A7B6BA; --line:rgba(255,255,255,.10);
+  --bg:#04050C; --card:rgba(255,255,255,.045); --lav:rgba(46,196,182,.14); --lav2:transparent;
+  --night:#04050C; --night2:#0B1424; --foot:#020308; --gold:#FFB38F; --hl:#7FE3D8; --soft:#A7B6BA;
+  --glass:rgba(255,255,255,.045); --glass2:rgba(255,255,255,.07); --coral:#FF9E7A;
+}
+html{background:#04050C}
+body{background:transparent!important}
+body{color:var(--ink);position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background:
+    radial-gradient(60% 45% at 85% 8%, rgba(46,196,182,.16), transparent 70%),
+    radial-gradient(50% 40% at 5% 35%, rgba(255,158,122,.10), transparent 70%),
+    radial-gradient(70% 50% at 50% 100%, rgba(30,70,140,.22), transparent 70%),
+    #04050C}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+
+/* 섹션 배경은 투명하게 → 별이 계속 보이게 */
+.tint,.dark,section{background:transparent}
+.dark{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0))}
+.ribbon{background:rgba(255,255,255,.04);border-bottom:1px solid var(--line);color:#DDE7E8;letter-spacing:.2px;backdrop-filter:blur(6px)}
+.ribbon b{color:var(--coral)}
+
+/* 제목: 은은한 빛 + 그라데이션 강조 */
+h1,h2{color:#F4F8F8}
+h1{text-shadow:0 0 30px rgba(46,196,182,.18)}
+h1 em,h2 em,.dark h2 em{background:linear-gradient(90deg,#7FE3D8,#2EC4B6 45%,#FFB38F);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{background:rgba(46,196,182,.10);color:#9FEDE4;border:1px solid rgba(46,196,182,.35);letter-spacing:1.5px;text-transform:uppercase;font-size:12px}
+.lead,.sub{color:var(--sub)}
+.lead b{color:#E6F4F2}
+
+/* 유리 카드 */
+.card,.stat,.checks li,.pillar,.vs .bad,.rv .card,.steps li,details,.bonus,.make .card{
+  background:var(--glass);border:1px solid var(--line);box-shadow:0 10px 40px rgba(0,0,0,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--ink)}
+.stat b{color:#7FE3D8;text-shadow:0 0 18px rgba(46,196,182,.35)}
+.stat span,.pillar p,.make p,.road p,.steps p,details p{color:var(--sub)}
+.pillar .no{background:linear-gradient(135deg,#2EC4B6,#127C7A);box-shadow:0 0 18px rgba(46,196,182,.45)}
+.checks li::before{background:rgba(255,120,90,.15);color:#FF9E7A}
+.checks.ok li::before{background:rgba(46,196,182,.18);color:#7FE3D8}
+
+/* 버튼: 빛나는 그라데이션 */
+.cta{background:linear-gradient(135deg,#2EC4B6 0%,#1C8C9C 55%,#12607A 100%);color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 10px 30px rgba(46,196,182,.35),inset 0 1px 0 rgba(255,255,255,.25)}
+.cta:hover{background:linear-gradient(135deg,#3FD6C8 0%,#22A0AE 55%,#156E8A 100%)}
+.cta[disabled]{background:rgba(255,255,255,.08);color:#7E8C90;border-color:var(--line);box-shadow:none}
+
+/* 폼 */
+.field input{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);color:#F2F7F7}
+.field input::placeholder{color:#6F7E82}
+.field input:focus{border-color:#2EC4B6;box-shadow:0 0 0 3px rgba(46,196,182,.18)}
+.agree{color:#D5DFE0}
+.agree .all{border-color:var(--line)}
+.agree a{color:#9FB0B3}
+.agree .gift{color:#FFB38F}
+.err{color:#FF9E7A}
+.trust{color:#8FA0A4}
+
+/* 영상·배속·진행표시 */
+.video{border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 40px rgba(46,196,182,.10)}
+.video-ph{background:radial-gradient(80% 80% at 50% 30%,rgba(46,196,182,.18),transparent 70%),#070B16}
+.video-ph .play{border:1px solid rgba(255,255,255,.25)}
+.speed button{background:var(--glass);color:#D5DFE0;border-color:var(--line)}
+.speed button[aria-pressed="true"]{background:#2EC4B6;color:#04050C;border-color:#2EC4B6}
+.journey div{border-color:rgba(255,255,255,.12);color:#7E8C90}
+.journey .on{border-color:#2EC4B6;color:#9FEDE4}
+
+/* 3단계 전용 */
+.vs .good{background:linear-gradient(135deg,rgba(46,196,182,.25),rgba(255,158,122,.18));border:1px solid rgba(255,255,255,.14)}
+.vs .bad b{color:#FF9E7A}
+.bonus{border:1px dashed rgba(255,179,143,.55)}
+.bonus b{color:#FFB38F}
+.road li::before{background:rgba(255,255,255,.12)}
+.road .n{background:linear-gradient(135deg,#2EC4B6,#127C7A);box-shadow:0 0 14px rgba(46,196,182,.4)}
+.road li.m3 .n{background:linear-gradient(135deg,#FF9E7A,#C75F45)}
+.road em{color:#7FE3D8}
+.rv .big{background:linear-gradient(135deg,rgba(46,196,182,.18),rgba(255,158,122,.12))}
+.rv .big b{color:#FFB38F}
+.rv small{color:#7FE3D8}
+.steps .n{background:rgba(46,196,182,.16);color:#9FEDE4}
+summary{color:#EEF4F4}
+summary::after{color:#2EC4B6}
+.slider img{border-color:var(--line)}
+.prof li::before{color:#2EC4B6}
+.note{color:#8FA0A4}
+
+/* 아래 고정 버튼·푸터 */
+.sticky{background:rgba(4,5,12,.82);border-top:1px solid var(--line)}
+footer{background:transparent;border-top:1px solid var(--line);color:#6F7E82}
+footer button{color:#9FB0B3}
+
+/* 신청 창·약관은 읽기 쉽게 밝게 유지 (구글폼이 흰 화면이라) */
+.mbox{color:#1E1830}
+.mbox .sub{color:#5E5872}
+.pay h3{color:#1E1830}
+.acct{background:#EEF7F6}
+.acct b{color:#0C5C5B}
+dialog.legal{color:#333}
+.plan-sum div,.month{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.plan-sum b,.month .wk{color:#7FE3D8}
+.month .tag{background:linear-gradient(135deg,#2EC4B6,#127C7A);color:#04050C}
+.month.m3 .tag{background:linear-gradient(135deg,#FFB38F,#E07A5F)}
+.month.m3 .wk{color:#FFB38F}
+.carousel{background:rgba(255,255,255,.03);box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.dots button{background:rgba(255,255,255,.18)}
+.dots button[aria-current="true"]{background:#2EC4B6}
+.pm,.three span{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.pm b{color:#7FE3D8}
+.pm u{background:linear-gradient(transparent 60%,rgba(255,158,122,.30) 0)}
+.three span{color:#DDE7E8}
+.cmp{background:var(--glass);backdrop-filter:blur(10px)}
+.cmp .head .me{background:linear-gradient(135deg,#2EC4B6,#127C7A);color:#04050C!important}
+</style><script>/* 우주 테마 배경: 반짝이는 별 + 가끔 별똥별. 움직임 줄이기 설정이면 정지 화면 */
+(function(){
+  var c = document.createElement('canvas'); c.id = 'stars'; c.setAttribute('aria-hidden', 'true');
+  document.addEventListener('DOMContentLoaded', function(){ document.body.prepend(c); start(); });
+  function start(){
+    var ctx = c.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2), W, H, stars = [], shoot = null;
+    var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function size(){
+      W = c.clientWidth; H = c.clientHeight; c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var n = Math.round(W * H / 3600); stars = [];
+      for (var i = 0; i < n; i++) stars.push({ x: Math.random() * W, y: Math.random() * H, r: Math.random() < .06 ? 1.2 + Math.random() * .5 : .4 + Math.random() * .7,
+        a: .35 + Math.random() * .6, s: .4 + Math.random() * 1.4, p: Math.random() * 6.28, t: Math.random() < .12 ? 'teal' : Math.random() < .05 ? 'coral' : 'white' });
+    }
+    var COL = { white: '255,255,255', teal: '127,227,216', coral: '255,179,143' };
+    function frame(ms){
+      var t = ms / 1000; ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < stars.length; i++){
+        var s = stars[i], a = still ? s.a : s.a * (.55 + .45 * Math.sin(t * s.s + s.p));
+        ctx.beginPath(); ctx.fillStyle = 'rgba(' + COL[s.t] + ',' + a.toFixed(3) + ')'; ctx.arc(s.x, s.y, s.r, 0, 6.283); ctx.fill();
+        /* 번짐 없음 */
+      }
+      if (!still){
+        if (!shoot && Math.random() < .004) shoot = { x: Math.random() * W * .7 + W * .2, y: Math.random() * H * .35, life: 0 };
+        if (shoot){
+          shoot.life += 1; var L = shoot.life, x = shoot.x - L * 9, y = shoot.y + L * 4.5, g = ctx.createLinearGradient(x, y, x + 90, y - 45);
+          g.addColorStop(0, 'rgba(255,255,255,' + Math.max(0, .9 - L / 40) + ')'); g.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.strokeStyle = g; ctx.lineWidth = 1.3; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + 90, y - 45); ctx.stroke();
+          if (L > 40) shoot = null;
+        }
+        requestAnimationFrame(frame);
+      }
+    }
+    size(); window.addEventListener('resize', function(){ size(); if (still) frame(0); });
+    still ? frame(0) : requestAnimationFrame(frame);
+  }
+})();
+</script></head>
 <body>
 <div class="ribbon">진단상담 신청 전 <b>필독</b> · 한 달에 5명만 받습니다</div>
 
@@ -298,6 +487,29 @@ details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
       <div class="bad"><b>화법만 있으면</b><br>만날 손님이 없어서 실력을 쓸 데가 없어요</div>
       <div class="bad"><b>광고만 있으면</b><br>연락처는 쌓이는데 상담에서 계약이 안 돼요</div>
       <div class="good">손님이 찾아오는 구조 + 찾아온 손님을 계약으로 바꾸는 화법<br>둘이 같이 돌아가야 고가상품이 팔립니다</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="center">이 과정의 <em>3가지 약속</em></h2>
+  <div class="promise">
+    <div class="pm"><span class="ic">🙌</span><b>쉽고</b><p>코딩·디자인 몰라도 돼요. 말로 설명하시면 같이 만들어요. 화법도 외우는 대본이 아니라 <u>내 말투</u>로 바꿔 드려요.</p></div>
+    <div class="pm"><span class="ic">⚡</span><b>빠르고</b><p><u>2개월 16회</u>면 화법 대본·사이트·알림톡·광고까지 다 세팅돼요. 주 2회라 막히면 <u>3~4일 안에</u> 바로 고쳐요.</p></div>
+    <div class="pm"><span class="ic">💰</span><b>돈을 아껴요</b><p>사이트 제작·자동화·광고 대행을 <u>따로따로 맡길 필요</u>가 없어요. 내가 이해하고 직접 고칠 수 있어서 수정할 때마다 비용이 들지 않아요.</p></div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <h2 class="center">혼자 하기 · 외주 맡기기 · <em>1:1 마스터</em></h2>
+    <p class="sub center">무엇이 다를까요?</p>
+    <div class="cmp" role="table" aria-label="방법 비교">
+      <div class="row head" role="row"><span></span><span>혼자 독학</span><span>외주 맡기기</span><span class="me">1:1 마스터</span></div>
+      <div class="row" role="row"><span>내 상품에 맞춤</span><span>✕ 영상 따라 하기</span><span>△ 업체 틀대로</span><span class="me">✓ 내 상품·내 고객</span></div>
+      <div class="row" role="row"><span>걸리는 시간</span><span>✕ 몇 달씩 헤맴</span><span>△ 업체 일정 따라</span><span class="me">✓ 2개월 16회</span></div>
+      <div class="row" role="row"><span>고칠 때</span><span>△ 혼자 검색</span><span>✕ 고칠 때마다 비용</span><span class="me">✓ 내가 직접</span></div>
+      <div class="row" role="row"><span>화법까지</span><span>✕ 따로 배워야</span><span>✕ 만들어만 줌</span><span class="me">✓ 상담 화법 포함</span></div>
     </div>
   </div>
 </section>
@@ -324,14 +536,25 @@ details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
 
 <section class="wrap">
   <h2 class="center">3개월 진행 순서</h2>
-  <p class="sub center">1~2개월 주 2회 1:1 (총 16회) · 3개월째 주 1회 Zoom 점검<br>본수업 2시간 30분 · 보충 1시간</p>
-  <ol class="road">
-    <li><span class="n">1주</span><em>1~4회</em><b>진단 · 고가상품 설계</b><p>지금 상품·고객·가격을 진단하고, 고가로 팔 수 있는 상품 구성을 같이 잡아요.</p></li>
-    <li><span class="n">3주</span><em>5~8회</em><b>고가 세일즈 화법</b><p>내 상품 상담 대본을 만들고 1:1 롤플레이로 연습해요. 특강 영상 대본도 이때 같이 써요.</p></li>
-    <li><span class="n">5주</span><em>9~12회</em><b>퍼널 제작 · 자동화 연결</b><p>3단계 웨비나 사이트를 만들고, 예약·알림톡 자동화를 연결해요.</p></li>
-    <li><span class="n">7주</span><em>13~16회</em><b>메타 광고 세팅 · 시작</b><p>광고 계정·픽셀 세팅, 광고 문구·소재를 만들고 광고를 켜요.</p></li>
-    <li class="m3"><span class="n">3달</span><em>Zoom 주 1회 · 4회</em><b>광고 결과 점검</b><p>들어온 숫자를 같이 보면서 광고·페이지·상담 화법을 고쳐 나가요.</p></li>
-  </ol>
+  <div class="plan-sum">
+    <div><b>16회</b><span>1:1 수업<br>(1~2개월 · 주 2회)</span></div>
+    <div><b>4회</b><span>Zoom 광고 점검<br>(3개월째 · 주 1회)</span></div>
+    <div><b>3.5시간</b><span>1:1 수업 1회<br>본수업 2.5h<br>+ 보충 1h</span></div>
+  </div>
+  <div class="month">
+    <div class="mh"><span class="tag">1개월차</span><b>주 2회 1:1 수업</b><small>1~8회</small></div>
+    <div class="step"><span class="wk">1~2주</span><div><b>진단 · 고가상품 설계</b><small>1~4회</small><p>지금 상품·고객·가격을 진단하고, 고가로 팔 수 있는 상품 구성을 같이 잡아요.</p></div></div>
+    <div class="step"><span class="wk">3~4주</span><div><b>고가 세일즈 화법</b><small>5~8회</small><p>내 상품 상담 대본을 만들고 1:1 롤플레이로 연습해요. 특강 영상 대본도 이때 같이 써요.</p></div></div>
+  </div>
+  <div class="month">
+    <div class="mh"><span class="tag">2개월차</span><b>주 2회 1:1 수업</b><small>9~16회</small></div>
+    <div class="step"><span class="wk">5~6주</span><div><b>퍼널 제작 · 자동화 연결</b><small>9~12회</small><p>3단계 웨비나 사이트를 만들고, 예약·알림톡 자동화를 연결해요.</p></div></div>
+    <div class="step"><span class="wk">7~8주</span><div><b>메타 광고 세팅 · 시작</b><small>13~16회</small><p>광고 계정·픽셀 세팅, 광고 문구·소재를 만들고 광고를 켜요.</p></div></div>
+  </div>
+  <div class="month m3">
+    <div class="mh"><span class="tag">3개월차</span><b>주 1회 Zoom 점검</b><small>4회</small></div>
+    <div class="step"><span class="wk">9~12주</span><div><b>광고 결과 점검</b><small>Zoom 1~4회</small><p>들어온 숫자를 같이 보면서 광고·페이지·상담 화법을 고쳐 나가요.</p></div></div>
+  </div>
 </section>
 
 <section class="tint">
@@ -342,8 +565,13 @@ details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
       <div class="card"><p class="qt">"월 500~700만 원 매출이 딱 그 수준에서 멈춰 있었어요. 화법 하나 바꿨을 뿐인데 이런 결과가 나올 줄은 몰랐습니다."</p><small>경력 설계사님 · 100만원 상품 3건 계약 → 3주 누적 3,000만원, 지점 1등</small></div>
       <div class="card"><p class="qt">"보험도, 영업도 태어나서 처음이었어요. 정해진 화법을 그대로 따라 했을 뿐인데…"</p><small>신입 설계사님 · 조기마감 1등 기록</small></div>
     </div>
-    <div class="slider" aria-label="후기 캡처"><img src="reviews/r01.jpg" alt="수강생 후기 캡처 1" loading="lazy"><img src="reviews/r02.jpg" alt="수강생 후기 캡처 2" loading="lazy"><img src="reviews/r03.jpg" alt="수강생 후기 캡처 3" loading="lazy"><img src="reviews/r04.jpg" alt="수강생 후기 캡처 4" loading="lazy"><img src="reviews/r05.jpg" alt="수강생 후기 캡처 5" loading="lazy"><img src="reviews/r06.jpg" alt="수강생 후기 캡처 6" loading="lazy"><img src="reviews/r07.jpg" alt="수강생 후기 캡처 7" loading="lazy"><img src="reviews/r08.jpg" alt="수강생 후기 캡처 8" loading="lazy"><img src="reviews/r09.jpg" alt="수강생 후기 캡처 9" loading="lazy"><img src="reviews/r10.jpg" alt="수강생 후기 캡처 10" loading="lazy"><img src="reviews/r11.jpg" alt="수강생 후기 캡처 11" loading="lazy"><img src="reviews/r12.jpg" alt="수강생 후기 캡처 12" loading="lazy"><img src="reviews/r13.jpg" alt="수강생 후기 캡처 13" loading="lazy"><img src="reviews/r14.jpg" alt="수강생 후기 캡처 14" loading="lazy"><img src="reviews/r15.jpg" alt="수강생 후기 캡처 15" loading="lazy"></div>
-    <p class="hint">← 옆으로 넘겨 보세요 →</p>
+    <div class="carousel rev" data-carousel aria-roledescription="carousel" aria-label="수강생 후기 캡처">
+      <div class="track"><img src="reviews/r01.jpg" alt="수강생 후기 캡처 1" loading="lazy"><img src="reviews/r02.jpg" alt="수강생 후기 캡처 2" loading="lazy"><img src="reviews/r03.jpg" alt="수강생 후기 캡처 3" loading="lazy"><img src="reviews/r04.jpg" alt="수강생 후기 캡처 4" loading="lazy"><img src="reviews/r05.jpg" alt="수강생 후기 캡처 5" loading="lazy"><img src="reviews/r06.jpg" alt="수강생 후기 캡처 6" loading="lazy"><img src="reviews/r07.jpg" alt="수강생 후기 캡처 7" loading="lazy"><img src="reviews/r08.jpg" alt="수강생 후기 캡처 8" loading="lazy"><img src="reviews/r09.jpg" alt="수강생 후기 캡처 9" loading="lazy"><img src="reviews/r10.jpg" alt="수강생 후기 캡처 10" loading="lazy"><img src="reviews/r11.jpg" alt="수강생 후기 캡처 11" loading="lazy"><img src="reviews/r12.jpg" alt="수강생 후기 캡처 12" loading="lazy"><img src="reviews/r13.jpg" alt="수강생 후기 캡처 13" loading="lazy"><img src="reviews/r14.jpg" alt="수강생 후기 캡처 14" loading="lazy"><img src="reviews/r15.jpg" alt="수강생 후기 캡처 15" loading="lazy"></div>
+      <button type="button" class="nav prev" aria-label="이전">‹</button><button type="button" class="nav next" aria-label="다음">›</button>
+      <div class="count" aria-live="polite"></div>
+    </div>
+    <div class="dots"></div>
+    <p class="hint">손가락으로 밀거나 ‹ › 를 눌러 넘겨 보세요</p>
   </div>
 </section>
 
@@ -368,8 +596,13 @@ details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
       <ul><li>세일즈 20년</li><li>1:1 맞춤 컨설팅·수업 1,000회 이상</li><li>교육부·중소벤처기업부 인정 자격증 발급 기관</li><li>저서 5권 이상 · 교보문고 MD 추천</li><li>대한민국 예술인</li></ul>
     </div>
   </div>
-  <div class="slider wide" aria-label="현장 강의 사진"><img src="lectures/lec01.jpg" alt="현장 강의 사진 1" loading="lazy"><img src="lectures/lec02.jpg" alt="현장 강의 사진 2" loading="lazy"><img src="lectures/lec03.jpg" alt="현장 강의 사진 3" loading="lazy"><img src="lectures/lec04.jpg" alt="현장 강의 사진 4" loading="lazy"><img src="lectures/lec05.jpg" alt="현장 강의 사진 5" loading="lazy"><img src="lectures/lec06.jpg" alt="현장 강의 사진 6" loading="lazy"><img src="lectures/lec07.jpg" alt="현장 강의 사진 7" loading="lazy"><img src="lectures/lec08.jpg" alt="현장 강의 사진 8" loading="lazy"><img src="lectures/lec09.jpg" alt="현장 강의 사진 9" loading="lazy"><img src="lectures/lec10.jpg" alt="현장 강의 사진 10" loading="lazy"></div>
-  <p class="hint">현장 강의 스케치 · 옆으로 넘겨 보세요</p>
+  <div class="carousel lec" data-carousel aria-roledescription="carousel" aria-label="현장 강의 사진">
+      <div class="track"><img src="lectures/lec01.jpg" alt="현장 강의 사진 1" loading="lazy"><img src="lectures/lec02.jpg" alt="현장 강의 사진 2" loading="lazy"><img src="lectures/lec03.jpg" alt="현장 강의 사진 3" loading="lazy"><img src="lectures/lec04.jpg" alt="현장 강의 사진 4" loading="lazy"><img src="lectures/lec05.jpg" alt="현장 강의 사진 5" loading="lazy"><img src="lectures/lec06.jpg" alt="현장 강의 사진 6" loading="lazy"><img src="lectures/lec07.jpg" alt="현장 강의 사진 7" loading="lazy"><img src="lectures/lec09.jpg" alt="현장 강의 사진 9" loading="lazy"><img src="lectures/lec10.jpg" alt="현장 강의 사진 10" loading="lazy"></div>
+      <button type="button" class="nav prev" aria-label="이전">‹</button><button type="button" class="nav next" aria-label="다음">›</button>
+      <div class="count" aria-live="polite"></div>
+    </div>
+    <div class="dots"></div>
+  <p class="hint">현장 강의 스케치</p>
 </section>
 
 <section class="tint">
@@ -521,6 +754,26 @@ document.addEventListener('DOMContentLoaded', function(){
     ot.innerHTML = '<div class="video-ph"><div class="play">▶</div><b>OT 영상 자리</b><p>영상이 준비되면 여기에 들어가요</p></div>';
   }
 
+
+  // 후기·강의 사진: 손가락으로 밀면 한 장씩 넘어감
+  document.querySelectorAll('[data-carousel]').forEach(function(box){
+    var track = box.querySelector('.track'), slides = track.children, n = slides.length, i = 0;
+    var dots = box.nextElementSibling, count = box.querySelector('.count');
+    for (var k = 0; k < n; k++){ var d = document.createElement('button'); d.type = 'button'; d.setAttribute('aria-label', (k + 1) + '번째'); (function(k){ d.onclick = function(){ go(k); }; })(k); dots.appendChild(d); }
+    function go(k){
+      i = (k + n) % n; track.style.transform = 'translateX(' + (-i * 100) + '%)';
+      count.textContent = (i + 1) + ' / ' + n;
+      [].forEach.call(dots.children, function(d, j){ d.setAttribute('aria-current', String(j === i)); });
+    }
+    box.querySelector('.prev').onclick = function(){ go(i - 1); };
+    box.querySelector('.next').onclick = function(){ go(i + 1); };
+    var x0 = null, dx = 0, w = 1;
+    box.addEventListener('pointerdown', function(e){ if (e.target.closest('.nav')) return; x0 = e.clientX; dx = 0; w = box.clientWidth; track.classList.add('drag'); });
+    box.addEventListener('pointermove', function(e){ if (x0 === null) return; dx = e.clientX - x0; track.style.transform = 'translateX(calc(' + (-i * 100) + '% + ' + dx + 'px))'; });
+    function end(){ if (x0 === null) return; track.classList.remove('drag'); x0 = null; if (Math.abs(dx) > w * .15) go(i + (dx < 0 ? 1 : -1)); else go(i); }
+    box.addEventListener('pointerup', end); box.addEventListener('pointercancel', end); box.addEventListener('pointerleave', end);
+    go(0);
+  });
   var modal = document.getElementById('modal'), dots = modal.querySelectorAll('.dots span');
   var formFrame = document.getElementById('formFrame'), calFrame = document.getElementById('calFrame');
   function show(n){
